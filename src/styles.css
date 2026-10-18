@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+:root { font-family: Manrope, Arial, sans-serif; background: #f8f5f1; color: #302827; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { font: inherit; }
+button { cursor: pointer; }
+.app { min-height: 100vh; background: #f8f5f1; color: #302827; transition: .2s; }
+.app[data-theme='dark'] { background: #1f1a19; color: #f7eee8; }
+.topbar { max-width: 1160px; margin: auto; padding: 22px 28px; display: flex; align-items: center; gap: 34px; border-bottom: 1px solid #e4d9d2; }
+.brand { margin-right: auto; color: inherit; font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; text-decoration: none; }
+.brand span { color: #9c6353; }
+nav { display: flex; gap: 18px; }
+nav a { color: #766963; font-weight: 700; text-decoration: none; }
+nav a.active { color: #8f5548; }
+nav b { display: inline-grid; min-width: 22px; place-items: center; padding: 2px 5px; border-radius: 100px; background: #ead9ce; color: #754237; font-size: .75rem; }
+.theme-toggle { border: 1px solid #dfd0c7; border-radius: 10px; padding: 9px 12px; background: transparent; color: inherit; font-size: .82rem; }
+.page { max-width: 1160px; margin: 0 auto; padding: 56px 28px 72px; }
+.page-intro { margin-bottom: 34px; }
+.eyebrow, .category { margin: 0 0 10px; color: #9c6353; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+h1, h2, p { margin-top: 0; }
+h1 { max-width: 700px; margin-bottom: 14px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1.05; letter-spacing: -.04em; }
+.page-intro > p:last-child, .empty > p { color: #786c66; font-size: 1.05rem; }
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.product-card { overflow: hidden; border: 1px solid #eadfd8; border-radius: 22px; background: #fffdfb; box-shadow: 0 10px 30px rgba(74,48,37,.07); }
+.product-image { height: 245px; padding: 20px; display: grid; place-items: center; overflow: hidden; position: relative; }
+.product-image img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; filter: drop-shadow(0 10px 12px rgba(49,42,38,.17)); }
+.product-details { position: relative; z-index: 2; padding: 22px; background: #fffdfb; }
+.product-details h2 { margin-bottom: 8px; font-size: 1.18rem; }
+.price { margin-bottom: 18px; font-size: 1.35rem; font-weight: 800; }
+.card-footer { display: flex; gap: 8px; align-items: center; }
+.card-footer button { flex: 1; border: 0; border-radius: 10px; padding: 12px 8px; background: #8f5548; color: white; font-weight: 700; }
+.card-footer .remove-button { flex: 0 0 auto; background: #f0e7e1; color: #725a50; }
+.card-footer .remove-button:disabled { opacity: .45; cursor: not-allowed; }
+.counter { display: grid; min-width: 42px; min-height: 42px; place-items: center; border-radius: 10px; background: #f1e5dc; color: #874d40; font-weight: 800; }
+.counter-label { margin: 12px 0 0; color: #87766e; font-size: .84rem; }
+.cart-layout { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 26px; align-items: start; }
+.cart-list { display: grid; gap: 14px; }
+.cart-row { display: grid; grid-template-columns: 95px 1fr auto; gap: 18px; align-items: center; padding: 16px; border: 1px solid #eadfd8; border-radius: 18px; background: #fffdfb; }
+.cart-row img { width: 95px; height: 105px; object-fit: cover; border-radius: 12px; }
+.cart-row h2 { margin-bottom: 8px; font-size: 1.1rem; }
+.cart-row p:not(.category) { margin-bottom: 10px; color: #776b65; }
+.quantity-actions { display: flex; align-items: center; gap: 10px; }
+.quantity-actions button { width: 29px; height: 29px; border: 0; border-radius: 8px; background: #eee3dc; color: #754237; font-weight: 800; }
+.cart-side { display: grid; gap: 14px; justify-items: end; }
+.text-button, .clear { border: 0; background: transparent; color: #965244; text-decoration: underline; }
+.summary { padding: 24px; border-radius: 18px; background: #ead9ce; }
+.summary h2 { font-size: 1.5rem; }
+.primary-link { display: block; border-radius: 10px; padding: 12px; background: #8f5548; color: white; text-align: center; text-decoration: none; font-weight: 800; }
+.clear { margin-top: 14px; padding: 0; }
+.empty { max-width: 600px; padding: 58px 0; }
+.success-message { margin: -14px 0 22px; padding: 13px 16px; border-radius: 10px; background: #e5f0df; color: #3c6536; font-weight: 700; }
+.auth-page, .dashboard-page { max-width: 560px; padding: 30px 0; }
+.login-form { display: grid; gap: 16px; margin-top: 26px; padding: 26px; border: 1px solid #eadfd8; border-radius: 18px; background: #fffdfb; }
+.login-form label { display: grid; gap: 7px; font-weight: 700; }
+.login-form input { width: 100%; border: 1px solid #d9cbc3; border-radius: 9px; padding: 12px; font: inherit; }
+.login-form button { border: 0; border-radius: 10px; padding: 13px; background: #8f5548; color: #fff; font-weight: 800; }
+.dashboard-page > p:not(.eyebrow) { color: #786c66; font-size: 1.05rem; }
+.dashboard-link { max-width: 230px; margin-top: 24px; }
+.app[data-theme='dark'] .topbar { border-color: #443936; }
+.app[data-theme='dark'] .product-card, .app[data-theme='dark'] .cart-row { border-color: #4b3d39; background: #2b2422; }
+.app[data-theme='dark'] .product-details, .app[data-theme='dark'] .cart-row p:not(.category), .app[data-theme='dark'] .page-intro > p:last-child { color: #cdbdb5; }
+.app[data-theme='dark'] .theme-toggle { border-color: #65524d; }
+.app[data-theme='dark'] .login-form { border-color: #4b3d39; background: #2b2422; }
+.app[data-theme='dark'] .login-form input { border-color: #65524d; background: #201a19; color: #f7eee8; }
+.app[data-theme='dark'] .dashboard-page > p:not(.eyebrow) { color: #cdbdb5; }
+@media (max-width: 800px) { .topbar { padding: 16px 20px; gap: 12px; flex-wrap: wrap; } .brand { width: 100%; } .theme-toggle { margin-left: auto; } .page { padding: 38px 20px; } .product-grid, .cart-layout { grid-template-columns: 1fr; } .cart-row { grid-template-columns: 75px 1fr; } .cart-row img { width: 75px; height: 85px; } .cart-side { grid-column: 2; justify-items: start; } }
